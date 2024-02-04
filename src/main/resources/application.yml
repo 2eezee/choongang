@@ -1,0 +1,22 @@
+server:
+  port: 8383
+# Oracle Connect
+spring:
+
+  # File Size
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+      
+  dataSource:
+    driver-class-name:  oracle.jdbc.driver.OracleDriver
+    url:  jdbc:oracle:thin:@172.30.1.87:1521/xe
+    username: scott
+    password: tiger
+    
+  # view Resolver
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
